@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Open in Sublime",
+  "description": "Open file paths in Sublime Text 3",
+  "version": "1.0",
+  "permissions": [
+    "contextMenus",
+    "declarativeContent",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+      "scripts": ["jquery.js", "background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery.js", "content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-32.png",
+    "128": "icon.png"
+  },
+  "page_action": {
+    "default_icon": "icon-32.png",
+    "default_title": "Open in Sublime Text"
+  },
+  "options_page": "options.html"
+}

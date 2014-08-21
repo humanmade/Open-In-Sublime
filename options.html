@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Open in Sublime Options</title>
+	<link rel="stylesheet" href="chrome-bootstrap.min.css">
+	<script src="jquery.js" type="text/javascript"></script>
+	<script src="options.js" type="text/javascript"></script>
+</head>
+<body class="chrome-bootstrap">
+
+<div class="frame">
+	<div class="navigation">
+		<h1><a href="#">Open in Sublime</a></h1>
+		<ul class="menu">
+			<li class="selected">
+				<a href="#general">General</a>
+			</li>
+			<li class="">
+				<a href="#github-mappings">GitHub Mappings</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="mainview view">
+
+		<div id="general" class="selected" style="display: block;">
+			<header>
+				<h1>General</h1>
+			</header>
+			<div class="content">
+				<div style="margin: 40px 0 10px;">
+					<h2>Path Substitutions</h2>
+					<p>Abolsute path replacement, for example map <code>/srv/www/</code> to <code>/Users/joe/projects/</code></p>
+					<input type="text" name="pathReplacement[search]" placeholder="Search text">
+					<input type="text" name="pathReplacement[replace]" placeholder="Raplace text">
+				</div>
+				<div class="controls">
+					<div class="spacer"></div>
+					<button class="save">Save</button>
+				</div>
+			</div>
+		</div>
+		<div id="github-mappings">
+			<header>
+				<h1>GitHub Mappings</h1>
+			</header>
+			<div class="content">
+				<div style="margin: 40px 0 10px;">
+					<h2>GitHub Repositories</h2>
+					<p>Provide mappings for GitHub Repositories to the clone on your filesystem.</p>
+
+					<ol id="github-mappings-list">
+						<li>
+							<p>
+								<input type="text" name="githubMappings[][repo]" placeholder="Repo Name">
+								<input type="text" name="githubMappings[][path]" placeholder="Local Path">
+								<a href="#" class="delete-repo-mapping">&times;</a>
+							</p>
+						</li>
+					</ol>
+
+						<button class="add-repo-mapping">Add New</button>
+				</div>
+				<div class="controls">
+					<div class="spacer"></div>
+					<button class="save">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
